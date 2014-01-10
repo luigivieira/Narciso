@@ -1,0 +1,10 @@
+GUI
+GUI.actions
+GUI.events
+GUI.filechoosers
+core.config
+core.errors
+core.exporting
+core.images
+core.info
+core.operations

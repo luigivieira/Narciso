@@ -1,0 +1,93 @@
+<!--
+/*
+ * Copyright (C) 2006 Kiran Mantripragada & Luiz Carlos Vieira
+ * http://researcher.ibm.com/researcher/view.php?person=br-kiran
+ * http://www.luiz.vieira.nom.br
+ *
+ * This file is part of the Narciso (Ambiente de Suporte ao Processamento
+ * de Imagens para Visão Computacional).
+ *
+ * Narciso is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Narciso is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+-->
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<operations>
+	<operation class="core.operations.CConvertToGSOperation" name="Conversão para Tons de Cinza" paramexample="">
+		Converte uma imagem dada do padrão RGB para o padrão de Tons de Cinza.
+	</operation>
+	<operation class="core.operations.CExtractHLSImagesOperation" name="Extração HLS" paramexample="">
+		Extrai os valores correspondentes à Matiz (Hue), à Luminosidade (Lightness) e à Saturação (Saturation)
+		da imagem dada e gera três imagens representantes desses componentes.
+	</operation>
+	<operation class="core.operations.CExtractRGBImagesOperation" name="Extração RGB" paramexample="">
+		Extrai os valores correspondentes ao vermelho, ao verde e ao azul da imagem dada e gera três imagens
+		representantes desses componentes.
+	</operation>	
+	<operation class="core.operations.CHistogramImageOperation" name="Imagem de Histograma" paramexample="width=640,height=480,numbins=256">
+		Calcula o histograma da imagem dada e gera uma nova imagem com sua representação gráfica. Os parâmetros esperados são:
+		width = largura da imagem gráfica do histograma em pixels.
+		height = altura da imagem gráfica do histograma em pixels.
+		numbins = número de barras (bins) utilizados e representados. Se não informado, o valor 256 é assumido como padrão.
+	</operation>
+	<operation class="core.operations.CRotationOperation" name="Rotação Geométrica" paramexample="angle=45">
+		Rotaciona a imagem dada com base no ângulo informado. O valor do parâmetro "angle" deve ser entre 0.1 e 179.9.
+	</operation>
+	<operation class="core.operations.CThresholdingOperation" name="Thresholding" paramexample="threshold=128">
+		Executa uma transformação binária em uma imagem baseada em um valor limite para os pixels. Requer o parâmetro
+		de nome "threadhold", que deve conter o valor limite entre 0 e 255.
+	</operation>
+	<operation class="core.operations.CArithmeticAddOperation" name="Adição Aritimética" paramexample="">
+		Realiza a operação aritimética de adição entre duas imagens.
+	</operation>
+	<operation class="core.operations.CArithmeticSubtractOperation" name="Subtração Aritimética" paramexample="">
+		Realiza a operação aritimética de subtração entre duas imagens.
+	</operation>
+	<operation class="core.operations.CArithmeticMultiplyOperation" name="Multiplicação Aritimética" paramexample="">
+		Realiza a operação aritimética de multiplicação entre duas imagens.
+	</operation>
+	<operation class="core.operations.CArithmeticDivideOperation" name="Divisão Aritimética" paramexample="">
+		Realiza a operação aritimética de divisão entre duas imagens.
+	</operation>
+	<operation class="core.operations.CLogicalAndOperation" name="E Lógico" paramexample="">
+		Realiza a operação lógica "e" (AND) entre duas imagens.
+	</operation>
+	<operation class="core.operations.CLogicalOrOperation" name="OU Lógico" paramexample="">
+		Realiza a operação lógica "ou" (OR) entre duas imagens.
+	</operation>
+	<operation class="core.operations.CLogicalXorOperation" name="OU Lógico Exclusivo" paramexample="">
+		Realiza a operação lógica "ou" exclusivo (XOR) entre duas imagens.
+	</operation>	
+	<operation class="core.operations.CLogicalNotOperation" name="NÃO Lógico" paramexample="">
+		Realiza a operação lógica "não" (NOT) nas imagens dadas.
+	</operation>	
+	<operation class="core.operations.CMedianFilterOperation" name="Filtro Mediano" paramexample="">
+		Aplica o filtro mediano sobre a imagem dada.
+	</operation>
+	<operation class="core.operations.CDFTOperation" name="Transformada de Fourier" paramexample="">
+		Através da aplicação da Transformada de Fourier na imagem dada, obtém o espectro de magnitude de todas
+		as suas freqüências componentes e gera uma imagem representativa.
+	</operation>
+	<operation class="core.operations.CFreiAndChenEdgeGradientOperation" name="Manipulação de Frei/Chen" paramexample="">
+		Identifica bordas na imagem utilizando a operação de gradiente e a máscara de Frei e Chen.
+	</operation>
+	<operation class="core.operations.CSobelEdgeGradientOperation" name="Manipulação de Sobel" paramexample="">
+		Identifica bordas na imagem utilizando a operação de gradiente e a máscara de Sobel.
+	</operation>
+	<operation class="core.operations.CRobertsCrossEdgeGradientOperation" name="Manipulação-Cruz de Robert" paramexample="">
+		Identifica bordas na imagem utilizando a operação de gradiente e a máscara em cruz de Roberts.
+	</operation>
+	<operation class="core.operations.CPrewittEdgeGradientOperation" name="Manipulação de Prewitt" paramexample="">
+		Identifica bordas na imagem utilizando a operação de gradiente e a máscara de Prewitt.	
+	</operation>
+</operations>
